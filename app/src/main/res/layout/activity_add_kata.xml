@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/inputKata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kata" />
+
+    <EditText
+        android:id="@+id/inputArti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Arti" />
+
+    <EditText
+        android:id="@+id/inputKategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kategori" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+</LinearLayout>
