@@ -19,7 +19,7 @@ abstract class KataDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     KataDatabase::class.java,
-                    "kata_database"
+                    "KamusSlang"
                 ).build()
                 INSTANCE = instance
                 instance

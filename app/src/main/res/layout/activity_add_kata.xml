@@ -16,11 +16,11 @@
         android:layout_height="wrap_content"
         android:hint="Arti" />
 
-    <EditText
+    <Spinner
         android:id="@+id/inputKategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Kategori" />
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:id="@+id/buttonSave"

@@ -43,25 +43,26 @@ android {
 }
 
 dependencies {
+    implementation(libs.core.ktx)
+    implementation(libs.junit.junit)
+    implementation(libs.androidx.junit.ktx)
     val room_version = "2.6.1"
 
-    // Room
+    // Room runtime & ktx
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.room:room-runtime:$room_version")
-    implementation("androidx.room:room-ktx:$room_version") // <- Tambahan penting untuk coroutine
+    implementation("androidx.room:room-ktx:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
 
-    // Lifecycle
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    // Room Testing
+    testImplementation("androidx.room:room-testing:$room_version")
 
-    // Core AndroidX & UI
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    // JUnit
+    testImplementation("junit:junit:4.13.2")
 
-    // Testing
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // Core Testing for LiveData and coroutines (optional)
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+    // Coroutine testing
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 }
